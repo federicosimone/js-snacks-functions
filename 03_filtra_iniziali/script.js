@@ -8,16 +8,17 @@ let lettera = prompt("Scegli la lettera per filtrare") ;
 //input
 function letterFilter(array, string) {
     let newArray= [] ;
-    
+    let letterToCheck = string;
 
     //elaborazione dati
 
     for (i=0 ; i< array.length; i++) {
-        let firstLetter = array[i].charAt(0) ;
-        
-        if ( firstLetter == string ) {
+        let thisWord= array[i]
+        let firstLetter = thisWord[0].toLowerCase() ;
+        console.log(firstLetter)
+        if ( firstLetter === letterToCheck ) {
             
-            newArray.push(array[i]) ; 
+            newArray.push(thisWord) ; 
         }
     } 
 
